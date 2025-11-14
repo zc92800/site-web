@@ -21,14 +21,11 @@ ul, ol {
     margin: auto;
     font-size: 1.1em;
     line-height: 1.6;
-}
-li {
-    margin-bottom: 8px;
-}
-ul,ol {
-    background: white;
+    background: rgb(255, 255, 255);
     padding: 20px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-
+}
+li {
+    margin-bottom: 8px;
 }
