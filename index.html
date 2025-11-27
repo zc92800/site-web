@@ -1,67 +1,33 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agora Cook</title>
     <link rel="stylesheet" href="index.css">
-
 </head>
 
 <body>
 
     <header>
         <h1>AGORA COOK</h1>
-        <p>Bienvenue sur le site — découvrez des recettes simples et rapides</p>
     </header>
 
     <nav>
-
-        <a href="#">Accueil</a>
-z        <a href="#">Recettes</a>
-
+        <a href="#">Home</a>
     </nav>
 
- 
+    <main>
+        <form class="search-form" onsubmit="event.preventDefault(); searchAPI();">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button type="submit">Search</button>
+        </form>
 
-    <main>  
-
-
-        <h2>Quelques propositions...</h2>
-
-        <section class="recette">
-
-            <h3>Pâtes à la carbonara</h3>
-            <img src="pates.jpg" alt="Pâtes à la carbonara">
-            <p>Un plat italien rapide et délicieux, prêt en 20 minutes.</p>
-
-
-        </section>
-
- 
-
-        <section class="recette">
-
-
-            <h3>Gâteau au chocolat</h3>
-            <img src="gateau.jpg" alt="Gâteau au chocolat">
-            <p>Un dessert fondant et facile à faire pour les gourmands.</p>
-
-
-        </section>
-
+        <div id="results"></div>
     </main>
 
-    <footer>
-
-        <p>Site de cuisine par Zinedine et Hugo — Terminale STI2D SIN</p>
-
-    </footer>
-
-
+    <script src="app.js"></script>
 </body>
-
 
 </html>
