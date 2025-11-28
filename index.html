@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -10,20 +10,26 @@
 
 <body>
 
+    <!-- Header -->
     <header>
         <h1>AGORA COOK</h1>
     </header>
 
+    <!-- Navigation -->
     <nav>
-        <a href="#">Home</a>
+        <a href="index.html">Accueil</a>
+        <a href="contact.html">Contact</a>
     </nav>
 
+    <!-- Contenu principal -->
     <main>
+        <!-- Formulaire de recherche -->
         <form class="search-form" onsubmit="event.preventDefault(); searchAPI();">
-            <input type="text" id="searchInput" placeholder="Search..." />
-            <button type="submit">Search</button>
+            <input type="text" id="searchInput" placeholder="Rechercher une recette..." />
+            <button type="submit">Rechercher</button>
         </form>
 
+        <!-- Résultats des recettes -->
         <div id="results"></div>
     </main>
 

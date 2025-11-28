@@ -1,44 +1,47 @@
+/* Police du site */
 @font-face {
     font-family: "determination";
     src: url("assets/DeterminationMonoWebRegular.ttf") format("truetype");
 }
 
+/* Base */
 body {
     font-family: "determination";
     margin: 0;
     padding: 0;
     background-color: #fff8f0;
-    background-image:; 
 }
 
+/* Header */
 header {
     background-color: #ff7f50;
     color: white;
     text-align: center;
-    padding: 30px 30px;
+    padding: 30px 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
 header h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin: 0;
     letter-spacing: 2px;
 }
 
+/* Navigation */
 nav {
     background-color: #333;
     text-align: center;
     padding: 12px;
     border-radius: 10px;
     width: 90%;
-    margin: 10px auto;
+    margin: 15px auto;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 12px;
+    margin: 0 15px;
     font-weight: bold;
     transition: 0.2s;
 }
@@ -48,16 +51,19 @@ nav a:hover {
     opacity: 0.8;
 }
 
+/* Main */
 main {
     padding: 40px 20px;
     text-align: center;
 }
 
+/* Formulaire de recherche */
 .search-form {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0;
+    margin-bottom: 30px;
 }
 
 .search-form input {
@@ -86,6 +92,7 @@ main {
     opacity: 0.8;
 }
 
+/* Résultats */
 #results {
     margin-top: 30px;
     display: flex;
@@ -102,7 +109,7 @@ main {
     text-align: center;
     cursor: pointer;
     transition: 0.2s;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 .recipe-card:hover {
@@ -112,42 +119,4 @@ main {
 .recipe-card img {
     width: 100%;
     border-radius: 8px;
-}
-
-.recipe-details {
-    max-width: 700px;
-    margin: 30px auto;
-    background: #fff;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-    text-align: left;
-}
-
-.recipe-details h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.recipe-details ul {
-    list-style: square;
-    padding-left: 20px;
-}
-
-.back-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border: none;
-    background-color: #ff7f50;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.back-btn:hover {
-    opacity: 0.8;
 }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – Agora Cook</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Contact</h1>
+    </header>
+
+    <main>
+
+        <!-- Formulaire simple -->
+        <form class="contact-form" action="#confirmation">
+
+            <!-- Nom -->
+            <label>Nom</label>
+            <input type="text" placeholder="Votre nom">
+
+            <!-- Email -->
+            <label>Email</label>
+            <input type="email" placeholder="Votre email">
+
+            <!-- Message -->
+            <label>Message</label>
+            <textarea placeholder="Votre message..."></textarea>
+
+            <!-- Envoyer -->
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <!-- Message envoyé -->
+        <p id="confirmation" class="confirmation">
+            Message envoyé !
+        </p>
+
+        <!-- Bouton pour revenir à l'accueil -->
+        <a href="index.html" class="back-btn">Accueil</a>
+
+    </main>
+
+</body>
+
+</html>
