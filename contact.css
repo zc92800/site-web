@@ -1,17 +1,14 @@
-/* Police du site */
 @font-face {
     font-family: "determination";
     src: url("assets/DeterminationMonoWebRegular.ttf") format("truetype");
 }
 
-/* Base de la page */
 body {
     font-family: "determination";
     margin: 0;
     background-color: #fff8f0;
 }
 
-/* Header */
 header {
     background-color: #ff7f50;
     color: white;
@@ -19,26 +16,36 @@ header {
     padding: 25px;
 }
 
-/* Main centré */
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+header h1 a:hover {
+    text-decoration: underline;
+}
+
 main {
     max-width: 500px;
     margin: 40px auto;
     padding: 20px;
 }
 
-/* Formulaire vertical */
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-/* Labels */
 .contact-form label {
     font-size: 1.1rem;
 }
 
-/* Champs */
 .contact-form input,
 .contact-form textarea {
     padding: 12px;
@@ -47,13 +54,11 @@ main {
     font-family: "determination";
 }
 
-/* Zone message */
 .contact-form textarea {
     height: 120px;
     resize: vertical;
 }
 
-/* Bouton envoyer */
 .contact-form button {
     margin-top: 10px;
     padding: 12px;
@@ -69,7 +74,6 @@ main {
     opacity: 0.85;
 }
 
-/* Bouton pour revenir à l'accueil */
 .back-btn {
     display: block;
     text-align: center;
@@ -87,7 +91,6 @@ main {
     opacity: 0.8;
 }
 
-/* Message envoyé caché */
 .confirmation {
     text-align: center;
     color: green;
@@ -97,7 +100,6 @@ main {
     transition: opacity 0.3s;
 }
 
-/* Affiche le message quand l'ancre est ciblée */
 #confirmation:target {
     opacity: 1;
 }

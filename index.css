@@ -28,6 +28,16 @@ header h1 {
     letter-spacing: 2px;
 }
 
+/* Lien du titre */
+header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+header h1 a:hover {
+    text-decoration: underline;
+}
+
 /* Navigation */
 nav {
     background-color: #333;
