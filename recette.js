@@ -7,7 +7,7 @@ window.onload = function () {
     loadDefaultRecipes();
 };
 
-// Charge un ensemble de recettes par défaut (20 recettes)
+// Charge 20 recettes par default
 async function loadDefaultRecipes() {
     const resultsBox = document.getElementById("results");
     resultsBox.innerHTML = "<p>Chargement des recettes...</p>";
@@ -38,12 +38,12 @@ async function loadDefaultRecipes() {
 
 // Fonction appelée quand l'utilisateur effectue une recherche
 async function searchAPI() {
-    const query = document.getElementById("searchInput").value.trim();
-    const resultsBox = document.getElementById("results");
+     const query = document.getElementById("searchInput").value.trim();
+     const resultsBox = document.getElementById("results");
 
     if (!query) {
         resultsBox.innerHTML = "<p>Veuillez entrer un terme de recherche.</p>";
-        return;
+         return;
     }
 
     resultsBox.innerHTML = "<p>Recherche en cours...</p>";
@@ -51,20 +51,20 @@ async function searchAPI() {
     try {
         // Recherche de recettes via l'API Spoonacular
         const response = await fetch(
-            `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&query=${encodeURIComponent(query)}&number=10`
+             `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&query=${encodeURIComponent(query)}&number=10`
         );
 
-        const data = await response.json();
-
-        if (!data.results || data.results.length === 0) {
-            resultsBox.innerHTML = "<p>Aucune recette trouvée.</p>";
+         const data = await response.json();
+  
+         if (!data.results || data.results.length === 0) {
+             resultsBox.innerHTML = "<p>Aucune recette trouvée.</p>";
             return;
         }
 
         lastSearchResults = data.results;
         displayResults(data.results);
 
-    } catch (err) {
+     } catch (err) {
         console.error(err);
         resultsBox.innerHTML = "<p>Erreur pendant la recherche.</p>";
     }
@@ -86,26 +86,26 @@ function displayResults(results) {
 
 // Charge les informations détaillées d'une recette
 async function loadRecipe(id) {
-    const resultsBox = document.getElementById("results");
+         const resultsBox = document.getElementById("results");
     resultsBox.innerHTML = "<p>Chargement de la recette...</p>";
 
-    try {
-        const response = await fetch(
-            `https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`
+      try {
+         const response = await fetch(
+             `https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`
         );
 
         const recipe = await response.json();
 
         // Affiche la page détaillée de la recette
         resultsBox.innerHTML = `
-            <div class="recipe-details">
+        <div class="recipe-details">
                 <h2>${recipe.title}</h2>
                 <img src="${recipe.image}" style="width:300px; border-radius:10px; display:block; margin:auto;">
                 
                 <h3>Ingrédients</h3>
                 <ul>
                     ${recipe.extendedIngredients
-                        .map(ing => `<li>${ing.original}</li>`)
+                        .map(ing =>`<li>${ing.original}</li>`)
                         .join("")}
                 </ul>
 
